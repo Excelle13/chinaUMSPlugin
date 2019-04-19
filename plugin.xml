@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.ttebd.chinaums" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ChinaUMSPlugin</name>
+    <js-module name="ChinaUMSPlugin" src="www/ChinaUMSPlugin.js">
+        <clobbers target="cordova.plugins.ChinaUMSPlugin"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ChinaUMSPlugin">
+                <param name="android-package" value="com.ttebd.chinaums.ChinaUMSPlugin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/ChinaUMSPlugin.java" target-dir="src/com/ttebd/chinaums/ChinaUMSPlugin"/>
+        <lib-file arch="device" src="src/android/libs/sdk4upos_20180411_mix.jar" />
+
+    </platform>
+</plugin>
