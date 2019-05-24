@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 
-import com.ttebd.chinaums.ChinaUMSPrinter;
+//import com.ttebd.chinaums.ChinaUMSPrinter;
 import com.ums.AppHelper;
 
 import org.apache.cordova.CallbackContext;
@@ -66,8 +66,8 @@ public class ChinaUMSPlugin extends CordovaPlugin {
                             break;
                         case "callPrint":
 
-                            ChinaUMSPrinter chinaUMSPrinter = new ChinaUMSPrinter(activity, callbackContext,printDataArray);
-                            chinaUMSPrinter.deviceServiceLogin();
+//                            ChinaUMSPrinter chinaUMSPrinter = new ChinaUMSPrinter(activity, callbackContext, printDataArray);
+//                            chinaUMSPrinter.deviceServiceLogin();
 
 //              打印图片
 
@@ -86,7 +86,6 @@ public class ChinaUMSPlugin extends CordovaPlugin {
               } catch (FileNotFoundException e) {
                 e.printStackTrace();
               }*/
-
 
 
 //              创建二维码代码
@@ -182,7 +181,6 @@ public class ChinaUMSPlugin extends CordovaPlugin {
         }
         return errObj;
     }
-
 
 
 }
